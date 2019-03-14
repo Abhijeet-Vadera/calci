@@ -1,0 +1,106 @@
+<!DOcCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" type="icon" href="calci.ico"/>
+
+    <script>
+        function takeValue(x) {
+            document.getElementById('inputwindow').value += x;
+        }
+
+        function clearInput(y) {
+            document.getElementById('inputwindow').value = y;
+        }
+
+        function calculateResult() {
+            var result = eval(document.getElementById('inputwindow').value);
+            document.getElementById('inputwindow').value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <div align="center">        
+        <form name="calculator" id="calculator">
+            <table>
+                <tr>
+                    <th colspan="4"><h1>Calculator By Abhijeet</h1></th>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="text" name="inputwindow" id="inputwindow">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="one" value="1" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="two" value="2" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="three" value="3" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="plus" value="+" onclick="takeValue(this.value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="four" value="4" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="five" value="5" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="six" value="6" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="minus" value="-" onclick="takeValue(this.value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="seven" value="7" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="eight" value="8" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="nine" value="9" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="by" value="*" onclick="takeValue(this.value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="zero" value="0" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="decimal" value="." onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="devide" value="/" onclick="takeValue(this.value)">
+                    </td>
+                    <td>
+                        <input type="button" id="percent" value="%" onclick="takeValue(this.value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" id="equal" value="=" onclick="calculateResult()">
+                    </td>
+                    <td colspan="2">
+                        <input type="reset" value="Clear"> </td>
+                </tr>
+            </table>  
+        </form>
+    </div>
+</body>
+
+</html>
